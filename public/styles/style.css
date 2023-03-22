@@ -1,0 +1,196 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --geel: #f4eb34;
+  --groen: #72a7a6;
+  --black: #000;
+  --wit: #ffffff;
+  --licht-grijs: #eee;
+  --donker-grijs: #ccc;
+  --lichtblauw: #e4f2f2;
+  --donkerblauw: #b5dbdc;
+  --font: "Montserrat";
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  margin: 0px;
+  font-family: var(--font);
+}
+
+.Verzendkosten {
+  background-color: var(--geel);
+  padding: 16px;
+  font-size: 12px;
+  text-align: center;
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em 0;
+  font-family: var(--font);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+  margin: -3em;
+  margin-top: -1em;
+  margin-left: -5em;
+  justify-content: flex-end;
+}
+
+header ul li {
+  font-size: 10px;
+  margin-left: -1em;
+  padding: 0.5em;
+}
+
+nav {
+  margin: 1em auto;
+  padding: 0 2em;
+}
+
+nav li {
+  padding: 3vh 0;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--black);
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.Vini-Mini {
+  margin-left: 0.5em;
+  width: 12%;
+  height: 5%;
+}
+
+h1 {
+  margin-top: 1em;
+  font-size: 25px;
+  color: var(--groen);
+  font-family: var(--font);
+  font-weight: 700;
+  justify-content: center;
+  display: flex;
+}
+
+.product-container {
+  row-gap: 2rem;
+}
+
+.product {
+  transition: 0.3s;
+  margin-bottom: 1.8em;
+  background-color: #ffffff;
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
+}
+
+.product:hover {
+  transform: translateY(-0.5rem);
+}
+
+.product-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.product-new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--groen);
+  color: rgb(255, 255, 255);
+  padding: 0.3rem 0.75rem;
+  font-size: 1rem;
+}
+
+.product-data {
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+.product-name {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--groen);
+}
+
+.product-price {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: var(--groen);
+  margin: 4rem 0 0.5rem 1.5rem;
+  text-align: left;
+}
+
+.section-all {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--black);
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+}
+
+.foto {
+  max-width: 20em;
+}
+
+
+fieldset {
+        background-color: var(--wit);
+        padding: 4rem;
+        justify-content: center;
+        border-radius: 20px 20px 20px 20px;
+        border-style: solid 1px var(--black);
+        box-shadow: -4px -4px 10px 2px rgb(0, 0, 0, 0.1);
+}
