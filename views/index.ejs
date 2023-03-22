@@ -1,0 +1,63 @@
+<%- include('./partials/head') %>
+
+<body>
+  <div class="Verzendkosten">
+    GEEN VERZENDKOSTEN bij aankoop van mijn eerste pinda in 3 of 6 stappen +
+    mijn eerste pinda Opvolgkit
+  </div>
+
+  <header>
+    <img src="./assets/Vini Mini.png" class="Vini-Mini" alt="ViniMiniLogo" />
+    <nav>
+      <ul>
+        <li><a href="">Voor mini </a></li>
+        <li><a href="">Producten </a></li>
+        <li><a href="">Over ons </a></li>
+        <li><a href="">Nieuws </a></li>
+        <li><a href="">Contact </a></li>
+        <li><a href="">Zoeken </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Producten</h1>
+
+  <!-- <h2 class="section-title"></h2> -->
+  <a href="#" class="section-all">Startpagina / Producten</a>
+
+  <section class="product section" id="products">
+    <% producten.forEach(product=> { %>
+    <div class="product-container bd-grid">
+      <div class="product">
+        <div class="product-box">
+          <a href="/detail/?detailSlug=<%= product.slug %> "> </a>
+
+          <!-- dit zorgt ervoor dat je plaatjes uit de database krijgt, ook als er geen plaatje is ingevoerd -->
+          <% if(product.plaatjes.length) { %>
+          <a href="/detail/?detailSlug=<%= product.slug %>"
+            ><img
+              src="<%= product.plaatjes[0].url %>"
+              alt="Placeholder pinda"
+              class="foto"
+          /></a>
+
+          <!-- Als er bij een product geen url naar een plaatje is, laat dan deze placeholder image zien-->
+          <% }else{ %>
+          <img
+            src="/assets/vini-mini-alt.webp"
+            alt="Placeholder pinda"
+            class="foto"
+          />
+          <% } %>
+        </div>
+
+        <div class="product-data">
+          <h3 class="product-name"><%= product.titel %></h3>
+          <span class="product-price"> € <%= product.prijs %> </span>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </section>
+  <%- include('./partials/foot') %>
+</body>
