@@ -38,24 +38,3 @@ async function fetchJson(url, payload = {}) {
 }
 
 
-
-server.post('/new', (request, response) => {
-    const baseurl = "https://whois.fdnd.nl/api/v1"
-  
-    const url = `${baseurl}/member`
-  
-    postJson(url, request.body).then((data) => {
-      let newMember = { ... request.body }
-  
-      if (data.success) {
-        response.redirect('/?memberPosted=true') 
-        // TODO: squad meegeven, message meegeven
-        // TODO: Toast meegeven aan de homepagina
-      } else {
-        const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`
-        const newdata = { error: errormessage, values: newMember }
-        
-        response.render('form', newdata)
-      }
-    })
-  })
