@@ -13,7 +13,7 @@
         <div class="product-box">
           <a href="/detail/?detailSlug=<%= product.slug %> "> </a>
 
-          <!-- dit zorgt ervoor dat je plaatjes uit de database krijgt, ook als er geen plaatje is ingevoerd -->
+          <!-- foto uit de API -->
           <% if(product.plaatjes.length) { %>
           <a href="/detail/?detailSlug=<%= product.slug %>"
             ><img
@@ -22,7 +22,7 @@
               class="foto"
           /></a>
 
-          <!-- Als er bij een product geen url naar een plaatje is, laat dan deze placeholder image zien-->
+          <!-- Placeholder foto-->
           <% }else{ %>
           <img
             src="/assets/vini-mini-alt.webp"
