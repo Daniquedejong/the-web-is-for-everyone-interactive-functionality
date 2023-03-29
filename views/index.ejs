@@ -40,5 +40,41 @@
     </div>
     <% }) %>
   </section>
+
+  <div class="note">
+    <h1>Mini Notities</h1>
+  
+    <% if (typeof(error) != 'undefined') { %>
+      <strong>Er ging iets mis!</strong>
+    <% } %>
+    
+    <div class="form">
+
+    <form action="/newnote" method="post">
+  
+    <fieldset class="notitieFieldset">
+      <label> Titel <span>(Notitie Titel)</span>
+        <input type="text" required name="titel">
+      </label>
+  
+      <label>Notitie 
+        <input type="text" required name="beschrijving">
+      </label>
+  
+      <label>Datum 
+        <input type="datetime-local" required name="datum">
+      </label>
+  
+      <label>Herinnering 
+        <input type="datetime-local" required name="herinnering">
+      </label>
+    </fieldset>
+  
+      <button type="submit">Toevoegen</button>
+    </form>
+    </div>
+  </div>
+
+
   <%- include('./partials/foot') %>
 </body>
