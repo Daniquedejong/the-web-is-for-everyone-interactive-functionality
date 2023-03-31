@@ -27,7 +27,7 @@ app.get("/", (request, response) => {
   });
 });
 
-app.get("/hallo", (request, response) => {
+app.get("/logboek", (request, response) => {
     response.render("logboek");
 });
 
