@@ -31,6 +31,10 @@ app.get("/logboek", (request, response) => {
     response.render("logboek");
 });
 
+app.get("views/index", (request, response) => {
+  response.render("index");
+});
+
 
 
 
