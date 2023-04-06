@@ -1,7 +1,9 @@
 
-# Vini Mini productenoverzicht 
+# Vini Mini productenoverzicht en post vanuit de API
 
-![image](https://user-images.githubusercontent.com/112856683/225852464-ee53c2a9-0319-4f32-899e-4c6a9b8d2475.png)
+![image](https://user-images.githubusercontent.com/112856683/230010212-fd955e33-0fc2-4e36-ba81-a7ba379755f5.png)
+![image](https://user-images.githubusercontent.com/112856683/230031418-bebc28ec-f97d-4b0b-aa99-3392080600c3.png)
+
 
 
 ## 📚 Inhoudsopgave
