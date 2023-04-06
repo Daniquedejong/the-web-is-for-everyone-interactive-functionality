@@ -207,21 +207,48 @@ fieldset {
 }
 
 
-
 /*.....Logboek post.....*/
 .note {
-  padding-left: 30em;
-  padding-right: 30em;
+  padding-left: 40em;
+  padding-right: 40em;
+}
+
+.notitieFieldset{
+  border-radius: 10%;
+  border-style: solid 1px var(--black);
+  box-shadow: -2px -2px 10px 1px rgba(0, 0, 0, 0.1);
+  padding: 3em;
+}
+
+input{
+  padding-bottom: 1em;
 }
 
 /*....Footer....*/
-.footer {
+footer {
   background-color: #f5f5f5;
-  padding-bottom: 15em;
   margin-top: 10em;
   padding: 1em 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "i s m";
+  grid-column-gap: 0px;
 }
 
 h2 {
   color: #72a7a6;
 }
+
+
+.info {
+  grid-area: i;
+}
+
+.social {
+  grid-area: s;
+}
+
+.menu {
+  grid-area: m;
+}
+

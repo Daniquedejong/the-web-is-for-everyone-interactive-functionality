@@ -27,20 +27,16 @@ app.get("/", (request, response) => {
   });
 });
 
-app.get("/logboek", (request, response) => {
-    response.render("logboek");
-});
-
-app.get("views/index", (request, response) => {
-  response.render("index");
+app.get("/logboek", (request, response) => { //Als de route /logboek is dan wordt dit uitgevoerd
+    response.render("logboek"); //Dit verwijst naar de view/logboek.ejs
 });
 
 
 
 
 // ..............Post note to API.................
-//"/new" is de (post) actie van het formulier
-app.post('/newnote', function (req, res) {
+//"/newnote" is de (post) actie van het formulier
+app.post('/newnote', function (req, res) { // Vanuit het formulier wordt action = /newnote gebruikt. <form action="/newnote" method="post">
 
   req.body.afgerond = false
   req.body.persoonId = 'clemozv3c3eod0bunahh71sx7'
@@ -54,9 +50,8 @@ app.post('/newnote', function (req, res) {
     
     if (data.success) {
       console.log("POST gelukt")
-      res.redirect('/') 
-      // TODO: squad meegeven, message meegeven
-      // TODO: Toast meegeven aan de homepagina
+      res.redirect('/logboek') // Redirect naar de url(route)  /logboek
+  
     } else {
       
       console.log("Post error", data.message)

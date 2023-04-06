@@ -3,7 +3,7 @@
 <h1>Logboek</h1>
 
 
-<div class="note">
+<section class="note">
   
     <% if (typeof(error) != 'undefined') { %>
       <strong>Er ging iets mis!</strong>
@@ -14,7 +14,7 @@
     <form action="/newnote" method="post">
   
     <fieldset class="notitieFieldset">
-      <label> Titel <span>(Notitie Titel)</span>
+      <label>Titel
         <input type="text" required name="titel">
       </label>
   
@@ -36,6 +36,6 @@
     </div>
   </div>
 
-
+</section>
 <%- include('./partials/foot') %>
 </body>
